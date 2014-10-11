@@ -11,7 +11,20 @@
 |
 */
 
-Route::get('/', function()
+// admin domain
+Route::group(array("domain" => "admin.quanlygame.dev"), function()
 {
-	return View::make('hello');
+    require_once app_path() . '/route/admin.php';
 });
+// User action routes
+Route::get('register', 'UsersController@create');
+Route::post('users/list', 'UsersController@store');
+Route::get('login', 'UsersController@login');
+Route::post('login', 'UsersController@doLogin');
+Route::get('confirm/{code}', 'UsersController@confirm');
+Route::get('forgot/password', 'UsersController@forgotPassword');
+Route::post('forgot/password', 'UsersController@doForgotPassword');
+Route::get('reset/password/{token}', 'UsersController@resetPassword');
+Route::post('reset/password', 'UsersController@doResetPassword');
+Route::get('logout', 'UsersController@logout');
+require_once app_path() . '/route/site.php';

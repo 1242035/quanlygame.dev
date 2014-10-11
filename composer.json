@@ -32,5 +32,23 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "stable",
+    "require": {
+        "frozennode/administrator": "dev-master",
+        "zizaco/confide": "~4.0@dev",
+        "codesleeve/stapler": "1.0.*"
+    },
+    "scripts": {
+        "pre-update-cmd": [
+            "php artisan clear-compiled"
+        ],
+        "post-install-cmd": [
+            "php artisan optimize",
+            "php artisan asset:publish frozennode/administrator"
+        ],
+        "post-update-cmd": [
+            "php artisan optimize",
+            "php artisan asset:publish frozennode/administrator"
+        ]
+    }
 }

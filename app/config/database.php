@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'sqlite',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -48,8 +48,8 @@ return array(
 
 		'sqlite' => array(
 			'driver'   => 'sqlite',
-			'database' => __DIR__.'/../database/production.sqlite',
-			'prefix'   => '',
+			'database' => __DIR__.'/../database/production.db',
+			'prefix'   => 'qlg_',
 		),
 
 		'mysql' => array(
@@ -60,10 +60,10 @@ return array(
 			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
+			'prefix'    => 'qlg_',
 		),
 
-		'pgsql' => array(
+		/*'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
 			'database' => 'forge',
@@ -81,7 +81,7 @@ return array(
 			'username' => 'root',
 			'password' => '',
 			'prefix'   => '',
-		),
+		),*/
 
 	),
 

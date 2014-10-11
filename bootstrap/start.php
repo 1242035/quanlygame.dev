@@ -23,12 +23,20 @@ $app = new Illuminate\Foundation\Application;
 | given environment, then we will automatically detect it for you.
 |
 */
-
+/*
 $env = $app->detectEnvironment(array(
 
 	'local' => array('homestead'),
 
+));*/
+// setup for multi domain
+$env = $app->detectEnvironment(array(
+    'www'    => array('quanlygame.dev','www.quanlygame.dev'),
+    'admin'  => array('admin.quanlygame.dev'),
+    'static' => array('static.quanlygame.dev'),
+    'store'  => array('store.quanlygame.dev')
 ));
+
 
 /*
 |--------------------------------------------------------------------------
@@ -53,7 +61,6 @@ $app->bindInstallPaths(require __DIR__.'/paths.php');
 | from the actual running of the application with a given request.
 |
 */
-
 $framework = $app['path.base'].
                  '/vendor/laravel/framework/src';
 
