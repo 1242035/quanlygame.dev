@@ -12,10 +12,10 @@
 */
 
 // admin domain
-Route::group(array("domain" => "admin.quanlygame.dev"), function()
+/*Route::group(array("domain" => "admin.quanlygame.dev"), function()
 {
     require_once app_path() . '/route/admin.php';
-});
+});*/
 // User action routes
 Route::get('register', 'UsersController@create');
 Route::post('users/list', 'UsersController@store');

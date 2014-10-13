@@ -14,15 +14,14 @@ return array(
 
     'title' => 'Events',
 
-    'single' => 'events',
+    'single' => 'Event',
 
-    'model' => 'Events',
+    'model' => 'Event',
 
     /**
      * The display columns
      */
     'columns' => array(
-        'id',
         'title' => array(
             'title' => 'Title',
         ),
@@ -39,29 +38,6 @@ return array(
             'title'=> 'End'
         ),
     ),
-
-    /**
-     * The filter set
-     */
-    /*'filters' => array(
-        'id',
-        'first_name' => array(
-            'title' => 'First Name',
-        ),
-        'last_name' => array(
-            'title' => 'Last Name',
-        ),
-        'films' => array(
-            'title' => 'Films',
-            'type' => 'relationship',
-            'name_field' => 'name',
-        ),
-        'birth_date' => array(
-            'title' => 'Birth Date',
-            'type' => 'date'
-        ),
-    ),
-        */
     /**
      * The editable fields
      */
@@ -79,10 +55,12 @@ return array(
             'type' => 'text',
         ),
         'start_date' => array(
-            'title' => 'date'
+            'title' => 'Start',
+            'type' => 'date',
         ),
         'end_date' => array(
-            'title'=> 'date'
+            'title'=> 'End',
+            'type' => 'date',
         ),
     ),
 

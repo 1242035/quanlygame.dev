@@ -70,8 +70,13 @@ return array(
         ),
         'content' => array(
             'title' => 'Content',
-            'type' => 'text',
+            'type' => 'textarea',
         ),
+    ),
+    'rules' => array(
+        'title' => 'required|min:2|max:100',
+        'short' => 'required|min:2|max:100',
+        'content'=>'required|min:30',
     ),
 
 );

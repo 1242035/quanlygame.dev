@@ -7,7 +7,7 @@ return array(
 	 *
 	 * @type string
 	 */
-	'uri' => 'admin',
+	'uri' => 'admin.quanlygame.dev',
 
 	/**
 	 * Page title
@@ -51,11 +51,7 @@ return array(
 	 * 		'Analytics' => array('E-Commerce' => 'page.ecommerce.analytics'),
 	 *	)
 	 */
-	'menu' => array(
-        'Home',
-        'News' => array('News'),
-        'Events' => array('Event')
-    ),
+	'menu' => array('Home','News'),
 
 	/**
 	 * The permission option is the highest-level authentication check that lets you define a closure that should return true if the current user
@@ -65,7 +61,8 @@ return array(
 	 */
 	'permission'=> function()
 	{
-		return Auth::check();
+        return true;
+		//return Auth::check();
 	},
 
 	/**
@@ -81,14 +78,14 @@ return array(
 	 *
 	 * @type string
 	 */
-	'dashboard_view' => '',
+	'dashboard_view' => 'dashboard',
 
 	/**
 	 * The menu item that should be used as the default landing page of the administrative section
 	 *
 	 * @type string
 	 */
-	'home_page' => '/',
+	'home_page' => 'News',
 
 	/**
 	 * The route to which the user will be taken when they click the "back to site" button
@@ -102,14 +99,14 @@ return array(
 	 *
 	 * @type string
 	 */
-	'login_path' => '/login',
+	'login_path' => 'login',
 
 	/**
 	 * The logout path is the path where Administrator will send the user when they click the logout link
 	 *
 	 * @type string
 	 */
-	'logout_path' => false,
+	'logout_path' => 'logout',
 
 	/**
 	 * This is the key of the return path that is sent with the redirection to your login_action. Session::get('redirect') will hold the return URL.

@@ -122,7 +122,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'Frozennode\Administrator\AdministratorServiceProvider',
-        'Zizaco\Confide\ServiceProvider'
+        'Zizaco\Confide\ServiceProvider',
 
 	),
 

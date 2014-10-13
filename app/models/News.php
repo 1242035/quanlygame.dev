@@ -6,6 +6,6 @@
  * Time: 23:34
  */
 
-class News extends Illuminate\Database\Eloquent{
+class News extends Eloquent{
 
 } 
